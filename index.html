@@ -1,13 +1,167 @@
-
 <!DOCTYPE html>
 <html lang="fi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Huowin Pojat</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Huowin Pojat</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Georgia, serif;
+      background: #1b120b;
+      color: #f2e2b8;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.75)),
+        url("https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto=format&fit=crop&w=1600&q=80");
+      background-size: cover;
+      background-position: center;
+      text-align: center;
+      padding: 120px 20px;
+      border-bottom: 4px solid #b48a3c;
+    }
+
+    header h1 {
+      font-size: 3.5rem;
+      margin: 0;
+      color: #ffd779;
+      text-shadow: 3px 3px 6px #000;
+      letter-spacing: 2px;
+    }
+
+    header p {
+      font-size: 1.3rem;
+      margin-top: 15px;
+    }
+
+    nav {
+      background: #2c1b10;
+      text-align: center;
+      padding: 15px;
+      position: sticky;
+      top: 0;
+    }
+
+    nav a {
+      color: #ffd779;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    section {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 35px;
+      background: #2b1a10;
+      border: 2px solid #8a6428;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,0,0,.5);
+    }
+
+    h2 {
+      color: #ffd779;
+      border-bottom: 1px solid #8a6428;
+      padding-bottom: 10px;
+    }
+
+    .product {
+      background: #3a2415;
+      padding: 20px;
+      margin: 15px 0;
+      border-left: 5px solid #b48a3c;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: #120b07;
+      color: #c7b27c;
+      border-top: 3px solid #8a6428;
+    }
+
+    .button {
+      display: inline-block;
+      background: #b48a3c;
+      color: #1b120b;
+      padding: 12px 20px;
+      margin-top: 15px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 6px;
+    }
+  </style>
 </head>
 <body>
-    <h1>Tervetuloa Huowin Poikien sivuille</h1>
-    <p>Tämä sivusto on rakenteilla.</p>
+
+  <header>
+    <h1>Huowin Pojat</h1>
+    <p>Keskiajan henkeä, käsityötä ja tarinoita entisaikojen mailta</p>
+  </header>
+
+  <nav>
+    <a href="#tarina">Tarina</a>
+    <a href="#tuotteet">Tuotteet</a>
+    <a href="#tilaukset">Tilaukset</a>
+    <a href="#yhteystiedot">Yhteystiedot</a>
+  </nav>
+
+  <section id="tarina">
+    <h2>Tarina</h2>
+    <p>
+      Huowin Pojat syntyi rakkaudesta keskiajan tunnelmaan, käsillä tekemiseen
+      ja vanhoihin tarinoihin. Meitä inspiroivat linnat, markkinat, kilvet,
+      sepän työt ja nuotion äärellä kerrotut kertomukset.
+    </p>
+    <p>
+      Tavoitteenamme on tuoda pala menneiden aikojen tunnelmaa nykypäivään
+      tuotteiden, tilaustöiden ja elämyksellisen tekemisen kautta.
+    </p>
+  </section>
+
+  <section id="tuotteet">
+    <h2>Tuotteet</h2>
+
+    <div class="product">
+      <h3>Keskiaikaiset koristeet</h3>
+      <p>Käsityöhenkisiä koristeita juhliin, koteihin ja tapahtumiin.</p>
+    </div>
+
+    <div class="product">
+      <h3>Teematuotteet</h3>
+      <p>Keskiaikaan, fantasiaan ja vanhaan maailmaan sopivia tuotteita.</p>
+    </div>
+
+    <div class="product">
+      <h3>Tilaustyöt</h3>
+      <p>Mahdollisuus kysyä yksilöllisiä tuotteita ja erikoistoiveita.</p>
+    </div>
+  </section>
+
+  <section id="tilaukset">
+    <h2>Tilaukset</h2>
+    <p>
+      Tilaukset ja tiedustelut voi tehdä ottamalla yhteyttä sähköpostilla.
+      Kerro viestissä mitä tarvitset, määrä, aikataulu ja mahdolliset
+      erityistoiveet.
+    </p>
+    <a class="button" href="mailto:info@huowinpojat.fi">Tee tiedustelu</a>
+  </section>
+
+  <section id="yhteystiedot">
+    <h2>Yhteystiedot</h2>
+    <p><strong>Sähköposti:</strong> info@huowinpojat.fi</p>
+    <p><strong>Verkkosivu:</strong> huowinpojat.fi</p>
+    <p>
+      Ota yhteyttä, jos haluat kysyä tuotteista, tilauksista tai yhteistyöstä.
+    </p>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Huowin Pojat — Kaikki oikeudet pidätetään</p>
+  </footer>
+
 </body>
 </html>
