@@ -13,27 +13,66 @@
       line-height: 1.6;
     }
 
-    header {
-      background: linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.75)),
-        url("https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto=format&fit=crop&w=1600&q=80");
+    .hero {
+      min-height: 72vh;
+      background-image:
+        linear-gradient(rgba(0,0,0,.35), rgba(0,0,0,.65)),
+        url("file_00000000fe587243abed4105e72cafd6.png");
       background-size: cover;
-      background-position: center;
-      text-align: center;
-      padding: 120px 20px;
+      background-position: center top;
       border-bottom: 4px solid #b48a3c;
     }
 
-    header h1 {
-      font-size: 3.5rem;
+    .hero__overlay {
+      min-height: 72vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 3rem 1rem;
+    }
+
+    .hero__content {
+      max-width: 760px;
+      text-align: center;
+      background: rgba(35,20,10,.76);
+      padding: 2rem;
+      border: 2px solid #b48a3c;
+      border-radius: 12px;
+      box-shadow: 0 0 30px rgba(0,0,0,.55);
+    }
+
+    .hero__eyebrow {
+      color: #c7b27c;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+    }
+
+    .hero h1 {
       margin: 0;
       color: #ffd779;
+      font-size: clamp(2.5rem, 7vw, 5rem);
       text-shadow: 3px 3px 6px #000;
       letter-spacing: 2px;
     }
 
-    header p {
-      font-size: 1.3rem;
+    .hero p {
+      font-size: 1.2rem;
+    }
+
+    .hero__button {
+      display: inline-block;
+      background: #b48a3c;
+      color: #1b120b;
+      padding: 12px 24px;
       margin-top: 15px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 6px;
+    }
+
+    .hero__button:hover {
+      background: #d8ac56;
     }
 
     nav {
@@ -42,6 +81,7 @@
       padding: 15px;
       position: sticky;
       top: 0;
+      z-index: 10;
     }
 
     nav a {
@@ -92,19 +132,63 @@
       font-weight: bold;
       border-radius: 6px;
     }
+
+    .language-switch {
+      text-align: center;
+      padding: 10px;
+      background: #1b120b;
+    }
+
+    .language-switch a {
+      color: #ffd779;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    @media (max-width: 700px) {
+      .hero,
+      .hero__overlay {
+        min-height: 62vh;
+      }
+
+      .hero__content {
+        padding: 1.25rem;
+      }
+
+      nav a {
+        display: inline-block;
+        margin: 6px 10px;
+      }
+
+      section {
+        margin: 25px 12px;
+        padding: 24px;
+      }
+    }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>Huowin Pojat 4H-Yritys</h1>
-    <p>Viikinki- ja keskiaikateemaisia puuleluja lasten ulkoleikkeihin. Suomalaisten Suomessa käsityönä valmistamia ritarivarusteita.
-    Tule tapaamaan meitä kesällä 2026 Hollolan keskiaikamarkkinoilla ja Ulvilan Hansamarkkinoilla!</p>
+  <header class="hero">
+    <div class="hero__overlay">
+      <div class="hero__content">
+        <p class="hero__eyebrow">Huowin Pojat · 4H-Yritys Hollola</p>
+        <h1>Verstaalta seikkailuun</h1>
+        <p>
+          Viikinki- ja keskiaikateemaisia puuleluja lasten ulkoleikkeihin.
+          Suomessa käsityönä valmistettuja puisia kilpiä ja lyömäaseita
+          pienille ritareille ja viikingeille.
+        </p>
+        <a href="#tilaukset" class="hero__button">Tee tiedustelu</a>
+      </div>
+    </div>
   </header>
-<div style="text-align:center; padding:10px;">
-  <a href="index.html">🇫🇮 Suomi</a> |
-  <a href="en.html">🇬🇧 English</a>
-</div>
+
+  <div class="language-switch">
+    <a href="index.html">🇫🇮 Suomi</a> |
+    <a href="en.html">🇬🇧 English</a>
+  </div>
+
   <nav>
     <a href="#tarina">Tarina</a>
     <a href="#tuotteet">Tuotteet</a>
@@ -115,15 +199,18 @@
   <section id="tarina">
     <h2>Tarina</h2>
     <p>
-      Huowin Pojat syntyi ideasta 2021, kun eräillä suomalaisilla keskiaikamarkkinoilla ei ollut myynnissä yhtäkään lasten puulelua. Kuukausien tuotekehittelyn myötä kolmen veljeksen Huowin Pojat oli valmis myymään tuotteita Hansamarkkinoilla.
-      Valikoimassa oli ensin vaakunakilvet ja miekat, mutta hiljalleen valikoimaan tulivat kevyet miekat, tapparat, tikarit, puukot, sotavasarat ja -kirveet.
-      Vuonna 2026 poikien idea sai tuekseen 4H Yrityksen koulutuksineen ja ohjaajineen. 
+      Huowin Pojat syntyi ideasta 2021, kun eräillä suomalaisilla keskiaikamarkkinoilla
+      ei ollut myynnissä yhtäkään lasten puulelua. Kuukausien tuotekehittelyn myötä
+      kolmen veljeksen Huowin Pojat oli valmis myymään tuotteita Hansamarkkinoilla.
+      Valikoimassa oli ensin vaakunakilvet ja miekat, mutta hiljalleen valikoimaan
+      tulivat kevyet miekat, tapparat, tikarit, puukot, sotavasarat ja -kirveet.
+      Vuonna 2026 poikien idea sai tuekseen 4H Yrityksen koulutuksineen ja ohjaajineen.
       Huowi tarkoittaa sotilasta.
-      
     </p>
     <p>
       Tavoitteenamme on tuoda pala menneiden aikojen tunnelmaa nykypäivään
-      tuotteiden, tilaustöiden ja elämyksellisen tekemisen kautta. Ja vähentää mielekkäällä tavalla ruutuaikaa.
+      tuotteiden, tilaustöiden ja elämyksellisen tekemisen kautta. Ja vähentää
+      mielekkäällä tavalla ruutuaikaa.
     </p>
   </section>
 
@@ -132,39 +219,52 @@
 
     <div class="product">
       <h3>Ritarin työkalut</h3>
-      <p> Tuotteet valmistettu suomalaisesta korkealaatuisesta koivuvanerista omin käsin autotallissa. Tuotteisiin kolvattu Huowin Poikien puumerkki.</p>
+      <p>
+        Tuotteet valmistetaan suomalaisesta korkealaatuisesta koivuvanerista
+        omin käsin autotallissa. Tuotteisiin kolvataan Huowin Poikien puumerkki.
+      </p>
     </div>
 
     <div class="product">
       <h3>Kilvet</h3>
-      <p>Keskiaika- ja viikinkiteemaiset vaneriset kilvet saatavilla pyöreinä tai vaakunan muotoisina. Maalatut kilvet on ruiskulakattu. Kädensijat on kierrätysnahkaa.
-        Hinta 25,00e/kpl. </p>
+      <p>
+        Keskiaika- ja viikinkiteemaiset vaneriset kilvet saatavilla pyöreinä
+        tai vaakunan muotoisina. Maalatut kilvet on ruiskulakattu.
+        Kädensijat ovat kierrätysnahkaa. Hinta 25,00 €/kpl.
+      </p>
     </div>
 
     <div class="product">
-      <h3>Lyömäasee4</h3>
-      <p> Keskiaika- ja viikinkiteemaiset vaneriset ja puiset lyömaseet. Osa malleista sisältää juuttikankaiset käsikahvat. Hinnat alkaen 5,00e/kpl. Gladius-pohjaiset miekat 15,00e/kpl. Mahdollisuus kysyä yksilöllisiä tuotteita ja erikoistoiveita.</p>
+      <h3>Lyömäaseet</h3>
+      <p>
+        Keskiaika- ja viikinkiteemaiset vaneriset ja puiset lyömäaseet.
+        Osa malleista sisältää juuttikankaiset käsikahvat.
+        Hinnat alkaen 5,00 €/kpl. Gladius-pohjaiset miekat 15,00 €/kpl.
+        Mahdollisuus kysyä yksilöllisiä tuotteita ja erikoistoiveita.
+      </p>
     </div>
   </section>
 
   <section id="tilaukset">
     <h2>Tilaukset ja tuotelahjat</h2>
     <p>
-      Tilaukset ja tiedustelut voi tehdä ottamalla yhteyttä sähköpostilla osoitteeseen huowinpojat(at)gmail.com
-      Kerro viestissä mitä tarvitset, määrä, aikataulu ja mahdolliset
-      erityistoiveet. Huomaathan että jokainen tuote on yksilöllinen.
-
-      Pyydä tarjous isommista eristä tai mikäli haluat Huowin Pojilta tuotelahjat. Tue suomalaista työtä.
+      Tilaukset ja tiedustelut voi tehdä ottamalla yhteyttä sähköpostilla osoitteeseen
+      huowinpojat(at)gmail.com. Kerro viestissä mitä tarvitset, määrä, aikataulu ja
+      mahdolliset erityistoiveet. Huomaathan, että jokainen tuote on yksilöllinen.
     </p>
-    <a class="button" href="mailto:info@huowinpojat.fi">Tee tiedustelu</a>
+    <p>
+      Pyydä tarjous isommista eristä tai mikäli haluat Huowin Pojilta tuotelahjat.
+      Tue suomalaista työtä.
+    </p>
+    <a class="button" href="mailto:huowinpojat@gmail.com">Tee tiedustelu</a>
   </section>
 
   <section id="yhteystiedot">
     <h2>Yhteystiedot</h2>
-    <p><strong>Sähköposti:</strong> huowinpojat(at) gmail.com</p>
+    <p><strong>Sähköposti:</strong> huowinpojat(at)gmail.com</p>
     <p><strong>Verkkosivu:</strong> huowinpojat.fi</p>
-  <p><strong>Verkkosivu:</strong> https://lahti.4h.fi/4h-yritys/4h-yrittajat/huowinpojat/ </p>
-      <p>
+    <p><strong>4H-sivu:</strong> https://lahti.4h.fi/4h-yritys/4h-yrittajat/huowinpojat/</p>
+    <p>
       Ota yhteyttä, jos haluat kysyä tuotteista, tilauksista tai yhteistyöstä.
     </p>
   </section>
